@@ -107,8 +107,8 @@ The BMI088 accelerometer features two interrupt pins that the data ready interru
 
 | Pin Mode   | Name       |
 | ---------- | ---------- |
-| Push-Pull  | PUSH_PULL  |
-| Open-Drain | OPEN_DRAIN |
+| Push-Pull  | PM_PUSH_PULL  |
+| Open-Drain | PM_OPEN_DRAIN |
 
 | Active Level | Name        |
 | ------------ | ----------- |
@@ -119,7 +119,7 @@ Below is an example of setting the interrupt pin 1 to push-pull and active-high.
 
 ```C++
 bool status;
-status = accel.pinModeInt1(Bmi088Accel::PUSH_PULL,Bmi088Accel::ACTIVE_HIGH);
+status = accel.pinModeInt1(Bmi088Accel::PM_PUSH_PULL,Bmi088Accel::ACTIVE_HIGH);
 ```
 
 **(optional) mapDrdyInt1(bool enable)**
@@ -253,8 +253,8 @@ The BMI088 gyro features two interrupt pins that the data ready interrupt can be
 
 | Pin Mode   | Name       |
 | ---------- | ---------- |
-| Push-Pull  | PUSH_PULL  |
-| Open-Drain | OPEN_DRAIN |
+| Push-Pull  | PM_PUSH_PULL  |
+| Open-Drain | PM_OPEN_DRAIN |
 
 | Active Level | Name        |
 | ------------ | ----------- |
@@ -265,7 +265,7 @@ Below is an example of setting the interrupt pin 3 to push-pull and active-high.
 
 ```C++
 bool status;
-status = gyro.pinModeInt3(Bmi088Gyro::PUSH_PULL,Bmi088Gyro::ACTIVE_HIGH);
+status = gyro.pinModeInt3(Bmi088Gyro::PM_PUSH_PULL,Bmi088Gyro::ACTIVE_HIGH);
 ```
 
 **(optional) mapDrdyInt3(bool enable)**
@@ -416,8 +416,8 @@ The BMI088 synchronized data interrupt pin can be setup with respect to whether 
 
 | Pin Mode   | Name       |
 | ---------- | ---------- |
-| Push-Pull  | PUSH_PULL  |
-| Open-Drain | OPEN_DRAIN |
+| Push-Pull  | PM_PUSH_PULL  |
+| Open-Drain | PM_OPEN_DRAIN |
 
 | Active Level | Name        |
 | ------------ | ----------- |
@@ -428,7 +428,7 @@ Below is an example of setting the interrupt to push-pull and active-high.
 
 ```C++
 bool status;
-status = bmi.pinModeDrdy(Bmi088::PUSH_PULL,Bmi088::ACTIVE_HIGH);
+status = bmi.pinModeDrdy(Bmi088::PM_PUSH_PULL,Bmi088::ACTIVE_HIGH);
 ```
 
 ### Common Data Collection Functions
